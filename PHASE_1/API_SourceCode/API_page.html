@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<title>GIM API</title>
+<style>
+
+.header {
+  padding: 100px 250px 200px;
+  text-align: center;
+  background: #efefef;
+  color: black;
+  font-size: 30px;
+  height: 900px;
+}
+
+.container-1 {
+  padding: 50px 250px 100px;
+  text-align: center;
+  background: #dddddd;
+  color: black;
+  font-size: 30px;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 60px;
+}
+
+a {
+  color: #6aa2fc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container-2 {
+  display: table;
+  width: 100%;
+  background: #595959;
+  color: white;
+  padding: 0px 15px 40px;
+}
+
+.a {
+  text-indent: 25px;
+}
+
+.b {
+  text-indent: 50px;
+}
+
+.c {
+  text-indent: 75px;
+}
+
+p.n {
+  margin: 0;
+}
+
+.code {
+  background:white;
+  text-align:left;
+  line-height: 100%;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body{
+  background: #f2f2f2;
+  font-family: "Trebuchet MS", Helvetica, sans-serif  ;
+}
+
+</style>
+<body>
+
+<div class="header">
+  <h1>Global Incident Map API</h1>
+  <div style="font-size: 40px">
+    <p>A hosted REST API ready to respond to your requests for Global Incident Map disease reports.
+    </p>
+  </div>
+  <div style="font-size: 20px">
+    <p>This API allows you to access various disease reports available upon your request based on your input of:
+    </p>
+    <ul style="display: inline-block">
+      <li>Time period of interest (Start Time and End Time)</li>
+      <li>Key terms</li>
+      <li>Location</li>
+    </ul>
+  </div>
+</div>
+
+<div class="container-1">
+  <h2>Get Started - Example Use Cases</h2>
+  <div style="text-align: center">
+    <p>GET /Articles/</p>
+    <p>
+The articles details endpoint will be the main endpoint that users call. It will return a large json string containing a list of articles. The return format is specified below.
+    </p>
+  </div>
+  <div style="text-align: left;font-weight: bold;">
+    <p>
+      Output Format
+    </p>
+  </div>
+  <div class="code">
+    <br>
+    <div class="n" style="word-break: break-word">
+      <p class="n">$ curl -X GET "http://127.0.0.1:5100/articles/?start%20time=2019-02-17T22%3A41%3A00&end%20time=2019-02-18T22%3A41%3A00&keyterms=Anthrax%2CZika&location=Sydney" -H "accept: application/json"</p>
+      <p class="n">[</p>
+    </div>
+    <div class="b">
+      <p class="n">{</p>
+    </div>
+    <div class="c">
+      <p class="n">"url": "newspaper.com/thisarticle",</p>
+      <p class="n">"date_of_publication": "&lt;string::date&gt;",</p>
+      <p class="n">"headline": "...",</p>
+      <p class="n">"main_text": "&lt;string&gt;",</p>
+      <p class="n">"reports": [...]</p>
+    </div>
+    <div class="b">
+      <p class="n">}</p>
+    </div>
+    <div class="a">
+      <p class="n">]</p>
+    </div>
+    <br>
+  </div>
+
+  <div style="text-align: center">
+    <p>GET /Articles/details</p>
+    <p>
+The articles endpoint will be the main endpoint that users call. It will return a large json string containing a list of articles. The return format is specified below.
+    </p>
+  </div>
+  <div style="text-align: left;font-weight: bold;">
+    <p>
+      Output Format
+    </p>
+  </div>
+  <div class="code">
+    <br>
+    <div class="n" style="word-break: break-word">
+      <p class="n">$ curl -X GET "http://127.0.0.1:5100/articles/?start%20time=2019-02-17T22%3A41%3A00&end%20time=2019-02-18T22%3A41%3A00&keyterms=Anthrax%2CZika&location=Sydney" -H "accept: application/json"</p>
+      <p class="n">[</p>
+    </div>
+    <div class="b">
+      <p class="n">{</p>
+    </div>
+    <div class="c">
+      <p class="n">"url": "newspaper.com/thisarticle",</p>
+      <p class="n">"details_url": "newspaperdetails.com/thisarticle",</p>
+      <p class="n">"date_of_publication": "&lt;string::date&gt;",</p>
+      <p class="n">"headline": "...",</p>
+      <p class="n">"main_text": "&lt;string&gt;"</p>
+      <p class="n">"disease": [...]</p>
+      <p class="n">"syndrome": [...]</p>
+      <p class="n">"type": "&lt;string&gt;"</p>
+      <p class="n">"date": "&lt;string::date&gt;"</p>
+      <p class="n">"country": "&lt;string&gt;"</p>
+      <p class="n">"location": "&lt;string&gt;"</p>
+      <p class="n">"latitude": &lt;float&gt;</p>
+      <p class="n">"longitude": &lt;float&gt;</p>
+      <p class="n">"number-affected": &lt;integer&gt;</p>
+      <p class="n">"comment": "&lt;string&gt;"</p>
+
+      <!--
+      [
+  {
+    "url": "<string>",
+    "details_url": "<string>",
+    "date_of_publication": "<string::date>",
+    "headline": "<string>",
+    "main_text": "<string>",
+    "disease": [
+      "<string::disease>"
+    ],
+    "syndrome": [
+      "<string::syndrome>"
+    ],
+    "type": "<string::event-type>",
+    "date": "<string::date>",
+    "country": "<string>",
+    "location": "<string>",
+    "latitude": <float>,
+    "longitude": <float>,
+    "number-affected": <integer>,
+    "comment": "<string>"
+  }
+]
+      -->
+    </div>
+    <div class="b">
+      <p class="n">}</p>
+    </div>
+    <div class="a">
+      <p class="n">]</p>
+    </div>
+    <br>
+  </div>
+</div>
+
+
+<div class="container-2">
+  <h2>Give it a go!</h2>
+  <div style="text-align: center;font-size: 20px;">
+    <p>Head to our <a href="http://46.101.167.163:5100/">Swagger Documentation</a> for more details and to manually give this API a go!</p>
+  </div>
+</div>
+
+
+
+</div>
+
+
+
+
+</body>
+</html>

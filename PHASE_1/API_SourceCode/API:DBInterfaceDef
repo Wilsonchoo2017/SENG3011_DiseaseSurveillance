@@ -1,0 +1,70 @@
+# API and DB queries interface definitions/specification
+
+# 4 DB queries methods
+
+# SIMILAR = NOT THE SAME! VERY MINUTE DIFFERENCES TO LOOK OUT FOR!
+# all format returned will be in JSON format!
+#	- clarify with Tammy if unsure
+
+# NOTE: This is without the extra information we have in our DB e.g. longitude and lattitude (for now)
+
+getDBArticles(startDate, endDate, location)
+
+# input parameters:
+#	startDate/endDate: “yyyy-MM-ddTHH:mm:ss”
+#	e.g. “2015-10-01T08:45:10”
+#
+#	location: "lower case string"
+#	e.g. "sydney", "australia", "nsw"
+
+# returned format:	<- SIMILAR to article json object format in spec
+#	{
+#	 	url: "string",
+#		date_of_publication: "yyyy-mm-ddThh:mm:ss", # <- equivalent to <string::date-exact>
+#		headline: "string",
+#		main_text: "string",
+#		reportId: whateveryourreportidformatisletmeknow,
+#		locationId: whateveryourreportidformatisletmeknow
+#	}
+
+getDBArticleReports(reportId)
+
+# input parameters:
+#	reportId: sameformataswhatyougiveme
+
+# returned format: # <- SIMILAR to [<object::report>]
+# [
+#	{
+#		disease: "string",
+#		syndrome: "string",
+#		reportedEventsId: whateveryourreportidformatisletmeknow,
+#		comment: "string"
+#	}
+# ] # <- notice that it is a LIST of this object (if there is only one, just put one object inside a list structure)
+	
+
+getDBArticleLocation(locationId)
+
+# input parameters:
+#	locationId: sameformateaswhatyougiveme
+
+# returned format: # <- SIMILAR to <object::location>
+#	{
+#		country: "string",
+#		location: "string"	# <- location is city (and state if given), if both are given, separate by "city/state"
+#	}
+
+getDBArticleReportedEvents(reportedEventsId)
+
+# input parameters:
+#	reportedEventsId: sameformateaswhatyougiveme
+
+# returned format: # SIMILAR to [<object::event-report>]
+# [
+#	{
+#		type: "string",	# <- make sure it satifies <string::event-type>
+#		date: "yyyy-mm-ddThh:mm:ss", # <- equivalent to <string::date-exact>
+#		number-affected: number
+#	}
+# ] # <- notice that it is a LIST of this object (if there is only one, just put one object inside a list structure)
+

@@ -1,0 +1,30 @@
+[
+  {
+    "url": "http://outbreaks.globalincidentmap.com/eventdetail.php?ID=31313",
+    "date_of_publication": "2019-03-18T23:27:00",
+    "headline": "INDIA - Seven-Year-Old Boy Dies Of West Nile Virus In Kozhikode",
+    "main_text": "“A seven-year-old boy in Kerala’s Mallapuram district who had tested positive for the West Nile Virus died at Kozhikode Medical College and Hospital on Monday, the Hindustan Times reported.”",
+    "reports": [
+      {
+        "disease": [
+          "West Nile Virus (suspected or confirmed)"
+        ],
+        "syndrome": [],
+        "reported_events": [
+          {
+            "type": "death",
+            "date": "2019-03-18T23:27:00",
+            "location": [
+              {
+                "country": "India",
+                "location": "Kerala"
+              }
+            ],
+            "number-affected": null
+          }
+        ],
+        "comment": null
+      }
+    ]
+  }
+]

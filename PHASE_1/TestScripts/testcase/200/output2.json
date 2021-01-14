@@ -1,0 +1,61 @@
+[
+  {
+    "url": "http://outbreaks.globalincidentmap.com/eventdetail.php?ID=31251",
+    "date_of_publication": "2019-03-12T22:09:00",
+    "headline": "SOUTH AFRICA - Nine Cases Of Meningitis Recorded In Durban Two Months",
+    "main_text": "“AT LEAST nine cases of meningitis, including one which resulted in the death of a primary school pupil, have been reported in the eThekwini region over the past two months.”",
+    "reports": [
+      {
+        "disease": [
+          "Meningitis Outbreak ( Suspected or Confirmed)"
+        ],
+        "syndrome": [],
+        "reported_events": [
+          {
+            "type": "presence",
+            "date": "2019-03-12T22:09:00",
+            "location": [
+              {
+                "country": "South Africa",
+                "location": "Ethekwini Region"
+              }
+            ],
+            "number-affected": null
+          }
+        ],
+        "comment": null
+      }
+    ]
+  },
+  {
+    "url": "http://outbreaks.globalincidentmap.com/eventdetail.php?ID=31101",
+    "date_of_publication": "2019-02-22T23:30:00",
+    "headline": "SOUTH AFRICA - Amanzimtoti Child Dies Of Meningitis",
+    "main_text": "“SEVERE headaches, vomiting and neckaches are symptoms of a strain of meningococcal meningitis, which recently claimed the life of a seven-year-old Amanzimtoti boy.”",
+    "reports": [
+      {
+        "disease": [
+          "Meningitis Outbreak ( Suspected or Confirmed)"
+        ],
+        "syndrome": [
+          "headache",
+          "vomiting"
+        ],
+        "reported_events": [
+          {
+            "type": "death",
+            "date": "2019-02-22T23:30:00",
+            "location": [
+              {
+                "country": "South Africa",
+                "location": "Amanzimtoti"
+              }
+            ],
+            "number-affected": null
+          }
+        ],
+        "comment": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+# Created by .ignore
+
+#Log file
+static/.*
+.*/API:DBInterfaceDef
+.vscode
+PHASE_2/Application_SourceCode/dashboard/HTML/node_modules/*
+new.txt
+npm-debug.log
+
+#Python Cache
+__pycache__/

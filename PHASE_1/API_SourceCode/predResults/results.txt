@@ -1,0 +1,12 @@
+GaussianNB-Average: 20.0
+KNeighborsClassifier-Average: 9.1
+SVC-Average: 2.8
+DecisionTreeClassifier-Average: 8.8
+LinearDiscriminantAnalysis-Average: 19.1
+LogisticRegression-Average: 15.3
+LinearRegression-Average: 8.64282906840137
+KMeans-Average: 8.1
+RandomForestRegressor-Average: 8.266
+[[0, 7, 5]]
+[[0 7 5]]
+[2]

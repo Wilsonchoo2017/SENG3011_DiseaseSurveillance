@@ -1,0 +1,6 @@
+{
+  "errors": {
+    "start time": "Format yyyy-MM-ddTHH:mm:ss e.g. 2019-02-17T22:41:00 Missing required parameter in the JSON body or the post body or the query string"
+  },
+  "message": "Input payload validation failed"
+}

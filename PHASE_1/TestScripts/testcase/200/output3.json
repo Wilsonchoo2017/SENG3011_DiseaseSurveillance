@@ -1,0 +1,32 @@
+[
+  {
+    "url": "http://outbreaks.globalincidentmap.com/eventdetail.php?ID=31079",
+    "date_of_publication": "2019-02-20T00:18:00",
+    "headline": "TAIWAN - Dengue Fever Cases Hit Southwest Taiwan",
+    "main_text": "“Two dengue fever cases involving foreign university students who had recently spent holidays in Indonesia and Malaysia have been confirmed in Tainan, southwestern Taiwan.”",
+    "reports": [
+      {
+        "disease": [
+          "Dengue / Hemorrhagic Fever"
+        ],
+        "syndrome": [
+          "fever"
+        ],
+        "reported_events": [
+          {
+            "type": "presence",
+            "date": "2019-02-20T00:18:00",
+            "location": [
+              {
+                "country": "Taiwan",
+                "location": "Tainan"
+              }
+            ],
+            "number-affected": null
+          }
+        ],
+        "comment": null
+      }
+    ]
+  }
+]

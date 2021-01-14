@@ -1,0 +1,6 @@
+{
+  "errors": {
+    "location": "Location name (city/country/state) e.g. India Missing required parameter in the JSON body or the post body or the query string"
+  },
+  "message": "Input payload validation failed"
+}
